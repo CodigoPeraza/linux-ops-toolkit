@@ -1,0 +1,11 @@
+[Unit]
+Description=Ejecuta el backup diario del laboratorio de operaciones
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=10m
+Persistent=true
+Unit=ops-backup.service
+
+[Install]
+WantedBy=timers.target

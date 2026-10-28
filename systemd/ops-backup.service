@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup diario del laboratorio de operaciones
+Documentation=https://github.com/CodigoPeraza/linux-ops-toolkit
+After=local-fs.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/linux-ops-toolkit/ops.env
+ExecStart=/opt/linux-ops-toolkit/scripts/backup.sh
+Nice=10
+IOSchedulingClass=best-effort
