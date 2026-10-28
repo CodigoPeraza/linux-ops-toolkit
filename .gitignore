@@ -1,0 +1,6 @@
+config/ops.env
+backups/*
+!backups/.gitkeep
+reports/*
+!reports/.gitkeep
+*.log
